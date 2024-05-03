@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 from collections import Counter
 
 # 读取图像
-img = cv2.imread(r"D:\imgs\003.jpg",2)
+img = cv2.imread(r".\imgs\003.jpg",2)
 img = 255 - img
 
 print(img.shape)  # [204,547]
