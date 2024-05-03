@@ -19,11 +19,12 @@ def correct_skew(img):
     # 将图像转换为灰度图,检测边缘，不需要色彩信息（1、去除色彩干扰；2、降低需要处理的数据）
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-    # 使用 Canny 边缘检测算法
+    # 使用Canny 边缘检测算法
     edges = cv2.Canny(gray, 50, 150, apertureSize=3)
 
     # 使用霍夫变换检测直线
-    lines = cv2.HoughLines(edges, 1, np.pi / 180, 200)
+    lines = cv2.HoughLines(edges, 1, np.pi / 180, 280)
+    print(lines, '霍夫变换检测到的直线、、、、、、、')
 
     # 检查是否检测到直线
     if lines is None:

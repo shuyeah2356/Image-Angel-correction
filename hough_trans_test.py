@@ -1,11 +1,12 @@
 import numpy as np
 import cv2
-# from matplotlib import pyplot as plt
+from matplotlib import pyplot as plt
 from collections import Counter
 
 # 读取图像
 img = cv2.imread(r"D:\imgs\003.jpg",2)
 img = 255 - img
+
 print(img.shape)  # [204,547]
 
 # 正变换：将xy坐标系中的点映射到极坐标中，记录映射函数经过的每一点
@@ -29,7 +30,8 @@ for x, y in zip(px, py):
 print(len(points))
 
 # 画极坐标图
-# points = np.array(points)
+points = np.array(points)
+print(points)
 # theta, rho = points[:,0], points[:,1]
 # ax = plt.subplot(111, projection='polar')
 # ax.scatter(np.pi*theta/180, rho, c='b', alpha=0.5,linewidths=0.01)
@@ -52,5 +54,5 @@ for t,r in zip(line_points[0],line_points[1]):
          if x in range(1,img.shape[1]):
          	mask[y,x] += 1
 
-# plt.imshow(mask)
-# plt.imshow(img)
+plt.imshow(mask)
+plt.imshow(img)
