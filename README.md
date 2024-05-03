@@ -58,6 +58,9 @@ Canny边缘检测结果❀
 
 [霍夫变换实现代码](./hough_trans_test.py)
 
+霍夫变换检测直线可视化结果：
+![alt text](./files/image.png)
+
 
 
 
