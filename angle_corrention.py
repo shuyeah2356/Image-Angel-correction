@@ -69,7 +69,7 @@ def rotate_image(img, angle):
 
 def main():
     # 读取图像
-    image = cv2.imread(r"D:\imgs\003.jpg")
+    image = cv2.imread(r".\imgs\003.jpg")
     # 显示结果
     cv2.imshow('Origin Image', image)
 
